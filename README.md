@@ -31,7 +31,7 @@ This repository contains the code for our study on methods for effective empathy
 * m2_4_batch_prompting_status - This Python program utilizes the OpenAI API batch prompting to retrieve the status of each of the batch requests, generating batch objects for each request and downloading the results.
 * m2_5_parse_batch_output.py - This Python program parses the output of the OpenAI API batch prompting process.
 * m2_6_improve_three_dimensions_sequentially.py - This Python program runs the process for the Targeted Empathy Improvement prompting strategy of improving each of the three dimensions sequentially.
-* m2_7_remove_test.py - This Python program removes the test dialogues from the train datasets.
+* m2_7_remove_test.py - This Python program removes the test dialogues from the datasets.
 * m2_8_sft_dpo_dataset_generation.py - This Python program converts the CSV datasets to LLaMA-Factory dataset format.
 
 `empathy-improvement-over-llm-responses`: This folder contains a util folder and Python programs numbered as a step-by-step process. The util folder contains Python programs for converting CSV datasets to LLaMA-Factory dataset format.
@@ -42,7 +42,7 @@ This repository contains the code for our study on methods for effective empathy
 * m2_5_parse_batch_output.py - This Python program parses the output of the OpenAI API batch prompting process.
 * m2_6_improve_three_dimensions_sequentially.py - This Python program runs the process for the Targeted Empathy Improvement prompting strategy of improving each of the three dimensions sequentially.
 * m2_7_remove_test.py - This Python program removes the test dialogues from the train datasets.
-* m2_8_sft_dpo_dataset_generation.py - This Python program converts the CSV datasets to LLaMA-Factory dataset format.
+* m2_8_sft_dpo_dataset_generation.py - This Python program splits the datasets for SFT and RHLF DPO and converts the CSV datasets to LLaMA-Factory dataset format.
 
 `model-testing`: This folder contains Python programs to generate responses for the based and fine-tuned models.
 
