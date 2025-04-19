@@ -9,8 +9,7 @@ Because SLMs are considerably smaller than LLMs, they are often utilized in doma
 Therefore, it is crucial to ensure that empathy, a fundamental aspect of positive human interactions, already instilled into LLMs, is retained by SLMs after distillation.
 In this paper, we develop a comprehensive approach for effective empathy distillation from LLMs into SLMs. Our approach features a two-step fine-tuning process, fully leveraging datasets of empathetic dialogue responses distilled from LLMs. 
 We explore several distillation methods beyond basic direct prompting and propose four unique sets of prompts for targeted empathy improvement to significantly enhance the empathy distillation process. 
-Our evaluations demonstrate that SLMs fine-tuned through the two-step fine-tuning process, with distillation datasets enhanced by the targeted empathy improvement prompts, significantly outperform the base SLM at generating empathetic responses, with a win rate of 90+\%. 
-Our targeted empathy improvement prompts substantially outperform the basic direct prompting with a 10\% improvement in win rate.
+Our evaluations demonstrate that SLMs fine-tuned through the two-step fine-tuning process, with distillation datasets enhanced by the targeted empathy improvement prompts, significantly outperform the base SLM at generating empathetic responses, with a win rate of 90+%. Our targeted empathy improvement prompts substantially outperform the basic direct prompting with a 10% improvement in win rate.
 
 ## About this Repository
 This repository contains the code for our study on methods for effective empathy distillation.
@@ -44,7 +43,9 @@ This repository contains the code for our study on methods for effective empathy
 * m2_7_remove_test.py - This Python program removes the test dialogues from the train datasets.
 * m2_8_sft_dpo_dataset_generation.py - This Python program splits the datasets for SFT and RHLF DPO and converts the CSV datasets to LLaMA-Factory dataset format.
 
-`model-testing`: This folder contains Python programs to generate responses for the based and fine-tuned models.
+Once the distillation datasets are created with one of the three methods above, they can be used to fine-tune base SLMs such as LlaMA-3.1-8B and Mistral-7B-v0.3 using LlaMA-Factory. For both SFT and RHLF DPO, you can the following hyper-parameters: Fine-Tuning Method = lora, Lora Rank = 8, Learning Rate = 5-e5, Epochs = 3.0, Compute Type = bf16, and Batch Size = 2. For DPO, you can use specific hyper parameters: Beta Value = 0.1 and Loss Type = sigmoid.
+
+`model-testing`: This folder contains Python programs to generate responses by calling the base or fine-tuned SLMs.
 
 `win-rate-evaluation`: This folder contains Python programs to evaluate the responses of the fine-tuned models along the win rate metric, judged by either GPT-4o or Gemini.
 
