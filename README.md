@@ -16,26 +16,26 @@ Our targeted empathy improvement prompts substantially outperform the basic dire
 This repository contains the code for our study on methods for effective empathy distillation.
 
 ####  Folders
-`config`: This folder contains the example configuration files for base LLaMA-3.1-8B, Mistral-7B-v0.3, and GPT-4o.
+`config`: This folder contains the example configuration files for base LLaMA-3.1-8B, Mistral-7B-v0.3, and GPT-4o. All configuration files can be created following these examples. 
 
 `dataset-analysis`: This folder provides two Python files, one for analyzing the statistics of the dataset and the other for creating the train and test dataset from the original dataset.
 
-`datasets`: This folder contains files, one being the original dataset, and the other for creating the directories of the project.
+`datasets`: This folder contains files, one being the original dataset, and the other for creating the working directories of the project.
 
-`direct-empathy-distillation`: This folder contains a util folder and a Python file. The Python file is for creating the datasets for direct empathy distillation, compiling the responses for each model dataset. The util folder contains Python programs for converting CSV datasets to LLaMA-Factory dataset format.
+`direct-empathy-distillation`: This folder contains a util folder and a Python file. The Python file is for creating the datasets for direct empathy distillation, compiling the distillation datasets for each LLM. The util folder contains Python programs for converting CSV datasets to LLaMA-Factory dataset format.
 
 `empathy-improvement-over-human-responses`: This folder contains a util folder and Python programs numbered as a step-by-step process. The util folder contains Python programs for converting CSV datasets to LLaMA-Factory dataset format.
-* m2_1_human_dataset.py - This Python program creates the human SFT and RLHF datasets, splitting the human responses based on their empathy score.
+* m2_1_human_dataset.py - This Python program creates the human SFT and RLHF datasets, splitting the human responses based on their empathy scores.
 * m2_2_create_batch_prompting_datasets.py - This Python program creates the datasets, in OpenAI API batch prompting format, for each of the Targeted Empathy Improvement prompting strategies.
 * m2_3_batch_prompting - This Python program utilizes the OpenAI API batch prompting to generate the responses for each Targeted Empathy Improvement prompting strategy.
-* m2_4_batch_prompting_status - This Python program utilizes the OpenAI API batch prompting to receive the status of each of the batch requests, generating batch objects for each request and downloading the results.
+* m2_4_batch_prompting_status - This Python program utilizes the OpenAI API batch prompting to retrieve the status of each of the batch requests, generating batch objects for each request and downloading the results.
 * m2_5_parse_batch_output.py - This Python program parses the output of the OpenAI API batch prompting process.
 * m2_6_improve_three_dimensions_sequentially.py - This Python program runs the process for the Targeted Empathy Improvement prompting strategy of improving each of the three dimensions sequentially.
 * m2_7_remove_test.py - This Python program removes the test dialogues from the train datasets.
 * m2_8_sft_dpo_dataset_generation.py - This Python program converts the CSV datasets to LLaMA-Factory dataset format.
 
 `empathy-improvement-over-llm-responses`: This folder contains a util folder and Python programs numbered as a step-by-step process. The util folder contains Python programs for converting CSV datasets to LLaMA-Factory dataset format.
-* m2_1_batch_generate_initial_response.py - This Python program employs OpenAI API batch prompting to generate initial responses to each of the train dialogues.
+* m2_1_batch_generate_initial_response.py - This Python program employs OpenAI API batch prompting to generate initial responses to each dialogue.
 * m2_2_create_batch_prompting_datasets.py - This Python program creates the datasets, in OpenAI API batch prompting format, for each of the Targeted Empathy Improvement prompting strategies.
 * m2_3_batch_prompting - This Python program utilizes the OpenAI API batch prompting to generate the responses for each Targeted Empathy Improvement prompting strategy.
 * m2_4_batch_prompting_status - This Python program utilizes the OpenAI API batch prompting to receive the status of each of the batch requests, generating batch objects for each request and downloading the results.
@@ -44,7 +44,7 @@ This repository contains the code for our study on methods for effective empathy
 * m2_7_remove_test.py - This Python program removes the test dialogues from the train datasets.
 * m2_8_sft_dpo_dataset_generation.py - This Python program converts the CSV datasets to LLaMA-Factory dataset format.
 
-`model-testing`: This folder contains Python programs to generate responses for the fine-tuned models.
+`model-testing`: This folder contains Python programs to generate responses for the based and fine-tuned models.
 
 `win-rate-evaluation`: This folder contains Python programs to evaluate the responses of the fine-tuned models along the win rate metric, judged by either GPT-4o or Gemini.
 
