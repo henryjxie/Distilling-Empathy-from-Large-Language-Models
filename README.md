@@ -18,7 +18,7 @@ This repository contains the code for our study on methods for effective empathy
 ####  Folders
 `config`: This folder contains the example configuration files for base LLaMA-3.1-8B, Mistral-7B-v0.3, and GPT-4o.
 
-`dataset-analysis: This folder provides two Python files, one for analyzing the statistics of the dataset and the other for creating the train and test dataset from the original dataset.
+`dataset-analysis`: This folder provides two Python files, one for analyzing the statistics of the dataset and the other for creating the train and test dataset from the original dataset.
 
 `datasets`: This folder contains files, one being the original dataset, and the other for creating the directories of the project.
 
