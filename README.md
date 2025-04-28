@@ -4,7 +4,7 @@ Henry Xie
 April 21, 2025
 
 ## Overview
-The distillation of knowledge from Large Language Models (LLMs) into Small Language Models (SLMs), preserving the capabilities and performance of LLMs while reducing model sizes, has played a key role in the proliferation of LLMs. 
+The distillation of knowledge from Large Language Models (LLMs) into Smaller Language Models (SLMs), preserving the capabilities and performance of LLMs while reducing model sizes, has played a key role in the proliferation of LLMs. 
 Because SLMs are considerably smaller than LLMs, they are often utilized in domains where human interaction is necessary while resources are highly constrained, e.g., smart phones. 
 Therefore, it is crucial to ensure that empathy, a fundamental aspect of positive human interactions, already instilled into LLMs, is retained by SLMs after distillation.
 In this paper, we develop a comprehensive approach for effective empathy distillation from LLMs into SLMs. Our approach features a two-step fine-tuning process, fully leveraging datasets of empathetic dialogue responses distilled from LLMs. 
